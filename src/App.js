@@ -45,12 +45,12 @@ const HeaderContent = styled.div`
 
 const FooterContent = styled.div`
   position: relative;
-  top: 16vh;
+  top: 35vh !important;
   /* left: 50%;
   transform: translateX(-50%); */
   text-align: center;
   @media (max-width: 800px) {
-    top: 18vh;
+    top: 35vh;
   }
 `;
 
