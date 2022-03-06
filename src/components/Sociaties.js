@@ -9,11 +9,15 @@ export default function Sociaties() {
 
   const ScaleButton = styled(IconButton)`
     color: ${selectedTheme.buttonColor} !important;
-    font-size: 1.8rem !important;
-    margin: 1vh 2.3vw !important;
+    font-size: 2.2rem !important;
+    margin: 1vh 1vw !important;
     @media (max-width: 800px) {
-      font-size: 1.4rem !important;
-      margin: 1vh 1vw !important;
+      font-size: 2rem !important;
+      margin: 2vh 1vw !important;
+    }
+    @media (max-width: 420px) {
+      font-size: 1.6rem !important;
+      margin: 0.5vh 1vw !important;
     }
   `;
 
@@ -21,7 +25,7 @@ export default function Sociaties() {
     <IconGroup>
       <ScaleButton>
         <a
-          style={{ color: "inherit", height: "1.8rem" }}
+          style={{ color: "inherit", height: "2rem" }}
           href="https://www.facebook.com/nguyenquoc.huy.545"
           target="_blank"
         >
@@ -30,7 +34,7 @@ export default function Sociaties() {
       </ScaleButton>
       <ScaleButton>
         <a
-          style={{ color: "inherit", height: "1.8rem" }}
+          style={{ color: "inherit", height: "2rem" }}
           href="https://github.com/huy6495"
           target="_blank"
         >
@@ -39,7 +43,7 @@ export default function Sociaties() {
       </ScaleButton>
       <ScaleButton>
         <a
-          style={{ color: "inherit", height: "1.8rem" }}
+          style={{ color: "inherit", height: "2rem" }}
           href="https://www.linkedin.com/in/huy-nguyen-688671156/"
           target="_blank"
         >
@@ -56,5 +60,5 @@ export default function Sociaties() {
 
 const IconGroup = styled.div`
   position: relative;
-  top: 11vh;
+  top: 15vh;
 `;

@@ -8,9 +8,13 @@ import Title from "./components/Title";
 import Sociaties from "./components/Sociaties";
 import SwitchButton from "./components/SwitchButton";
 import Copyright from "./components/Copyright";
-import About from "./pages/About";
+import About from "./components/About";
+
+import { useSelector } from "react-redux";
 
 function App() {
+  const { tabChosen } = useSelector((state) => state.TabsReducer);
+
   return (
     <Fragment>
       <Background />
@@ -19,14 +23,26 @@ function App() {
         <TextLogo />
         <Title />
         <Nav />
-        <Sociaties />
-        {/* <AboutContent>
+        {tabChosen === "Home" ? (
+          <>
+            <Sociaties />
+            <FooterContent>
+              <SwitchButton></SwitchButton>
+            </FooterContent>
+          </>
+        ) : tabChosen === "About" ? (
           <About />
-        </AboutContent> */}
-        <FooterContent>
-          <SwitchButton></SwitchButton>
-          <Copyright></Copyright>
-        </FooterContent>
+        ) : (
+          <>
+            <Sociaties />
+            <FooterContent>
+              <SwitchButton></SwitchButton>
+            </FooterContent>
+          </>
+        )}
+
+        {/* <About /> */}
+        {/* <TabsPage /> */}
       </HeaderContent>
     </Fragment>
   );
@@ -44,22 +60,19 @@ const HeaderContent = styled.div`
 `;
 
 const FooterContent = styled.div`
-  position: relative;
-  top: 35vh !important;
-  /* left: 50%;
-  transform: translateX(-50%); */
+  position: fixed;
+  top: 77vh !important;
   text-align: center;
-  @media (max-width: 800px) {
-    top: 35vh;
-  }
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
-const AboutContent = styled.div`
-  position: relative;
-  top: 11vh;
-  @media (max-width: 800px) {
-    font-size: 8px;
-    /* top: 50vh; */
-  }
-`;
+// const AboutContent = styled.div`
+//   position: relative;
+//   top: 11vh;
+//   @media (max-width: 800px) {
+//     font-size: 8px;
+//     /* top: 50vh; */
+//   }
+// `;
 export default App;

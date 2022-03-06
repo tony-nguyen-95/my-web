@@ -7,7 +7,7 @@ export default function Title() {
 
   return (
     <TitleStyled style={{ color: selectedTheme.secondaryColor }}>
-      Front-end Developer
+      Full-stack Developer
     </TitleStyled>
   );
 }
