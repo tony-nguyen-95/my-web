@@ -37,9 +37,6 @@ const AboutCard = styled.div`
 export default function About() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
-  // const onResumeClick = () => {
-  //   return PdfCV;
-  // };
 
   return (
     <AboutCard>
@@ -53,7 +50,7 @@ export default function About() {
             Hi, I am Huy.
             <br />
             {
-              "I am a full-stack developer who is highly interested in JavaScript. Those techs what I have used is React, NodeJs, ExpressJs, MySQL."
+              "I am a full-stack developer who is highly interested in Typescript."
             }
             <br />
             {
@@ -72,7 +69,7 @@ export default function About() {
           <hr />
           <Link
             color="inherit"
-            href="http://clone-movie-booking.surge.sh"
+            href="http://103.195.236.224:3000/"
             target="_blank"
             className={classes.root3}
           >
